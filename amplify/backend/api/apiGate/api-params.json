@@ -1,0 +1,49 @@
+{
+  "paths": [
+    {
+      "name": "/task",
+      "lambdaFunction": "task",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ],
+        "unauth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/task"
+    }
+  ],
+  "resourceName": "apiGate",
+  "apiName": "apiGate",
+  "functionArns": [
+    {
+      "lambdaFunction": "task"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-vueaws2-dev-134318-authRole",
+    "unAuthRoleName": "amplify-vueaws2-dev-134318-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "task",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

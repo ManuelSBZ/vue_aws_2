@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "storage": {
+      "todoTable": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
